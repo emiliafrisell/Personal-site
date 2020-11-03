@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+:root {
+    --cream: seashell;
+    --darkBlue: rgb(9, 45, 58);
+    --BGClistItem: rgb(187, 243, 243);
+    --BGCcurrent: teal;
+    --BGCmain: teal;
+    --BGCabout: seashell;
+    --mainTextColor: rgb(9, 45, 58);
+}
 body {
     font-family: sans-serif;
 }
@@ -29,7 +38,7 @@ body {
 
     h1 {
         max-width: 800px;
-        color: seashell;
+        color: var(--cream);
         font-size: 5em;
         position: relative;
         top: 0.34em;
@@ -40,7 +49,7 @@ body {
     h1 span {
         height: 62%;
         position: absolute;
-        color: rgb(9, 45, 58);
+        color: var(--darkBlue);
         overflow: hidden;  
         z-index: 5;
     }
@@ -58,18 +67,18 @@ body {
     }
 
     .current {
-        background-color: teal;
+        background-color: var(--BGCcurrent);
     }
 
     a .current {
-        color: seashell;
+        color: var(--cream);
     }
 
     li {
         display: inline;
         padding: 0.7em;
         margin-bottom: 4px;
-        background-color: rgb(187, 243, 243);
+        background-color: var(--BGClistItem);
         border-top-right-radius: 6px;
         border-bottom-right-radius: 6px;
         letter-spacing: 0.6px;
@@ -90,7 +99,7 @@ body {
             h1 a:visited, /* visited link */
             h1 a:hover, /* mouse over link */
             h1 a:active { /* selected link */
-                color: seashell;
+                color: var(--cream);
             }
             
         /* H1 span Links */
@@ -98,7 +107,7 @@ body {
             h1 span a:visited, /* visited link */
             h1 span a:hover, 
             h1 span a:active { /* selected link */
-                color: rgb(9, 45, 58);
+                color: var(--darkBlue);
             }
 
         /* Nav Links */
@@ -109,7 +118,7 @@ body {
             footer a:link, /* unvisited link */
             footer a:visited, /* visited link */
             footer a:active { /* selected link */ 
-                color: rgb(9, 45, 58);
+                color: var(--darkBlue);
             }
 
             footer a:hover { /* mouse over link */
@@ -120,9 +129,9 @@ body {
 
     main {
         grid-area: main;
-        color:rgb(247, 236, 193);
+        color: var(--mainTextColor);
         background-image: url("images/watercolors.png");
-        background-color: teal;
+        background-color: var(--BGCmain); 
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -142,14 +151,13 @@ body {
     }
 
     h3 {
-        font-size: 2.5em;
+        font-size: 2em;
         font-weight: bold;
         padding-top: 0.5em;
     }
 
     .subpages h3 {
-
-        text-shadow: 6px 6px  rgb(9, 45, 58);
+        /* text-shadow: 6px 6px var(--darkBlue); */
         padding-left: 1em;
     }
 
@@ -189,6 +197,11 @@ body {
 
             .about .b {
                 grid-area: 1 / 1 / 1 / 4;
+
+                margin: 1.5rem;
+                background-color: var(--BGCabout);
+                opacity: 0.8;
+                border-radius: 5px;
             }
 
             .about .a {
